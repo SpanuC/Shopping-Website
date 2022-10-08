@@ -80,10 +80,10 @@ export default {
       this.$store.dispatch("removeProductFromCart", product);
     },
     orderSuccess() {
-      if (this.cart.length > 0) {
+      if (this.getCart.length > 0) {
         this.order = true;
         this.$store.dispatch("orderSuccess");
-      } else if ((this.cart.length = 0)) {
+      } else if ((this.getCart.length = 0)) {
         this.order = false;
       }
     },
